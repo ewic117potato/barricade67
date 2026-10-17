@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Barricade Arena — Play With Friends</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div id="app">
+    <header class="topbar">
+      <button class="brand" id="homeBtn" title="Go home"><span class="brand-icon">▥</span><span>BARRICADE<span class="accent">.ARENA</span></span></button>
+      <div class="topbar-right"><span class="online-badge"><span id="connLight" class="light"></span><span id="connText">Connecting…</span></span><button id="indexBtn" class="quiet">✦ Card Index</button><button id="rulesBtn" class="quiet">? Rules</button></div>
+    </header>
+
+    <main>
+      <section id="homeScreen" class="screen home-screen">
+        <div class="hero-copy"><div class="eyebrow">A MULTIPLAYER STRATEGY ARENA <span>•</span> FREE TO PLAY</div><h1>Race the board.<br><span class="gradient-text">Rule the walls.</span></h1><p>Outsmart your friends in 1v1, 3-player or 4-player matches. Draft wild power cards. Build impossible detours. Be the first to cross the arena.</p><div class="hero-badges"><span>⚡ Live multiplayer</span><span>🕹️ Guest play</span><span>🤖 Smart bots</span><span>🃏 28 power cards</span></div></div>
+        <div class="home-panels">
+          <div class="panel panel-elevated"><span class="panel-kicker">STEP 01 — GUEST NAME</span><label for="guestName">Your nickname</label><input id="guestName" maxlength="18" placeholder="Enter a name" autocomplete="nickname" />
+            <span class="panel-kicker second-kicker">STEP 02 — MATCH SETTINGS</span><div class="setting-row"><div><label for="modeSelect">Game mode</label><small>Number of players</small></div><select id="modeSelect"><option value="2">1v1 · 2 players</option><option value="3">1v1v1 · 3 players</option><option value="4">1v1v1v1 · 4 players</option></select></div>
+            <label class="toggle-row"><span><strong>Fill empty spots with bots</strong><small>Start without waiting for everyone</small></span><input id="botsCheck" type="checkbox" checked /><span class="switch"></span></label>
+            <button id="createBtn" class="primary block">Create private lobby <span>↗</span></button>
+          </div>
+          <div class="panel join-panel"><span class="panel-kicker">HAVE A ROOM CODE?</span><h3>Join your friends</h3><p>Enter the six-character code your friend shared.</p><div class="join-input"><input id="joinCode" maxlength="6" placeholder="ABC123" autocapitalize="characters" spellcheck="false" /><button id="joinBtn" class="secondary">Join →</button></div><div class="separate"><span>NO DOWNLOADS. NO EMAILS. JUST PLAY.</span></div><div class="mini-board" aria-hidden="true"><div class="mini-grid" id="miniGrid"></div></div></div>
+        </div>
+      </section>
+
+      <section id="lobbyScreen" class="screen hidden lobby-screen">
+        <div class="section-heading"><div><span class="eyebrow">PRIVATE MULTIPLAYER</span><h2>Game lobby</h2><p>Invite friends with your shareable link or room code.</p></div><button id="leaveLobbyBtn" class="quiet outline">← Leave</button></div>
+        <div class="lobby-layout"><div class="panel lobby-main"><span class="panel-kicker">YOUR ROOM</span><div class="room-display"><div id="displayCode" class="big-code">------</div><div class="share-buttons"><button id="copyCodeBtn" class="secondary">Copy code</button><button id="copyLinkBtn" class="secondary">Copy link</button></div></div><div class="lobby-players" id="lobbyPlayers"></div><div class="lobby-footer"><div><span class="panel-kicker">MATCH CONFIGURATION</span><div id="lobbyMode" class="lobby-config"></div></div><button id="startBtn" class="primary">Start match →</button></div><p id="lobbyHint" class="muted"></p></div><div class="panel how-panel"><span class="panel-kicker">MATCH OVERVIEW</span><h3>One move changes everything.</h3><div class="how-step"><span>01</span><p><strong>Take your turn.</strong> Move a tile or place a barricade to change the maze.</p></div><div class="how-step"><span>02</span><p><strong>Draft cards.</strong> Every full round, choose 1 of 3 power cards simultaneously.</p></div><div class="how-step"><span>03</span><p><strong>Expand the map.</strong> The arena grows after rounds 4 and 8.</p></div><div class="how-step"><span>04</span><p><strong>Win the race.</strong> Reach the opposite board edge before your rivals.</p></div></div></div>
+      </section>
+
+      <section id="gameScreen" class="screen hidden game-screen">
+        <div class="game-heading"><div><span class="eyebrow" id="gameRoomLabel">PRIVATE ROOM</span><h2 id="roundTitle">Round 1</h2><span id="subStatus" class="muted">Choose your move.</span></div><div class="game-actions"><button id="shareGameBtn" class="quiet outline">↗ Share lobby</button><button id="leaveGameBtn" class="quiet outline">← Exit</button></div></div>
+        <div class="game-layout">
+          <aside class="panel players-panel"><span class="panel-kicker">PLAYERS</span><div id="playerCards" class="player-cards"></div><div class="divider"></div><span class="panel-kicker">RECENT MOVES</span><div id="history" class="history"></div></aside>
+          <div class="board-column"><div class="board-outer"><canvas id="board" width="720" height="720" aria-label="Game board. Select tiles to move or slots to place walls."></canvas></div><div class="tool-bar" id="toolBar"><button id="moveTool" class="tool active"><span>◉</span> Move <kbd>1</kbd></button><button id="wallTool" class="tool"><span>▰</span> Wall <kbd>2</kbd></button><button id="rotateTool" class="tool"><span>↻</span> Rotate <kbd>R</kbd></button><span id="wallToolLabel" class="toolbar-hint">Horizontal · 2 tiles</span></div><div id="playHint" class="play-hint">Click a glowing tile to move, or switch to Wall mode.</div></div>
+          <aside class="panel cards-panel"><div class="side-heading"><span class="panel-kicker">YOUR POWER CARDS</span><button id="clearCardBtn" class="tiny-link">Clear</button></div><p class="muted small">Click a card to equip it, then choose a target on the board. Instant cards activate immediately.</p><div id="handCards" class="hand-cards"></div><div class="divider"></div><div class="tips"><span class="panel-kicker">HOTKEYS</span><p><kbd>1</kbd> Move &nbsp; <kbd>2</kbd> Wall &nbsp; <kbd>R</kbd> Rotate &nbsp; <kbd>Esc</kbd> Unequip</p></div></aside>
+        </div>
+        <div id="draftOverlay" class="overlay hidden"><div class="draft-modal panel"><span class="eyebrow">NEW ROUND — EVERYONE PICKS AT ONCE</span><h2>Choose a power card</h2><p>You get one new card per round. Higher rarities are harder to find. Your pick is secret.</p><div id="draftChoices" class="draft-choices"></div><div id="draftWaiting" class="draft-waiting hidden">✓ Card locked in. Waiting for the other players…</div></div></div>
+        <div id="winOverlay" class="overlay hidden"><div class="win-modal panel"><div class="trophy">🏆</div><span class="eyebrow">MATCH COMPLETE</span><h2 id="winnerTitle">Winner!</h2><p id="winnerDesc">They reached their goal edge first.</p><button id="backToMenuBtn" class="primary">Back to main menu →</button></div></div>
+      </section>
+    </main>
+    <footer><span>MADE FOR FRIENDS · SERVER-AUTHORITATIVE MULTIPLAYER</span><span>Power cards • Private rooms • Bots</span></footer>
+  </div>
+
+  <div id="globalModal" class="overlay hidden"><div class="panel info-modal"><div class="modal-head"><div><span class="eyebrow" id="modalEyebrow">HOW IT WORKS</span><h2 id="modalTitle">Rules</h2></div><button id="closeModalBtn" class="icon-button" aria-label="Close">✕</button></div><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast hidden" role="status"></div>
+</body>
+</html>

@@ -1,14 +1,19 @@
 {
   "name": "barricade-arena",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "Online multiplayer turn-based barricade racing game with guest rooms, cards and bots",
+  "description": "Barricade Omega v4: browser wall-race with public lobbies, 81 cards, chaos events, switchable center win, classes, bots and Socket.IO",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
     "test": "node --test"
   },
-  "engines": {"node": ">=20"},
-  "dependencies": {"express": "^4.21.2", "socket.io": "^4.8.1"}
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
 }

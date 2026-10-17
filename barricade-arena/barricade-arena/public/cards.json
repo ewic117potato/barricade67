@@ -1,0 +1,198 @@
+[
+  {
+    "id": "spare_planks",
+    "name": "Spare Planks",
+    "rarity": "Common",
+    "icon": "🪵",
+    "desc": "Instantly gain 1 wall. Does not use your turn."
+  },
+  {
+    "id": "builder_kit",
+    "name": "Builder Kit",
+    "rarity": "Common",
+    "icon": "🧰",
+    "desc": "Instantly gain 2 walls. Does not use your turn."
+  },
+  {
+    "id": "thin_barrier",
+    "name": "Thin Barrier",
+    "rarity": "Common",
+    "icon": "📏",
+    "desc": "Place a short wall, 1 tile long."
+  },
+  {
+    "id": "free_brick",
+    "name": "Free Brick",
+    "rarity": "Common",
+    "icon": "🧱",
+    "desc": "Place a normal wall without spending a wall."
+  },
+  {
+    "id": "quick_stride",
+    "name": "Quick Stride",
+    "rarity": "Common",
+    "icon": "👟",
+    "desc": "Move up to 2 squares in a straight, unblocked line."
+  },
+  {
+    "id": "side_step",
+    "name": "Side Step",
+    "rarity": "Common",
+    "icon": "↗️",
+    "desc": "Move diagonally one tile via an open corner."
+  },
+  {
+    "id": "emergency_stash",
+    "name": "Emergency Stash",
+    "rarity": "Uncommon",
+    "icon": "📦",
+    "desc": "Instantly gain 3 walls. Does not use your turn."
+  },
+  {
+    "id": "long_barricade",
+    "name": "Long Barricade",
+    "rarity": "Uncommon",
+    "icon": "📐",
+    "desc": "Place a wall 3 tiles long, costs 1 wall."
+  },
+  {
+    "id": "wall_hopper",
+    "name": "Wall Hopper",
+    "rarity": "Uncommon",
+    "icon": "🦘",
+    "desc": "Step across an adjacent wall; destination must remain escapable."
+  },
+  {
+    "id": "sprint",
+    "name": "Sprint",
+    "rarity": "Uncommon",
+    "icon": "💨",
+    "desc": "Travel up to 3 clear squares in a straight line."
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim",
+    "rarity": "Uncommon",
+    "icon": "♻️",
+    "desc": "Remove one of your walls and regain 2 wall units."
+  },
+  {
+    "id": "drain",
+    "name": "Drain Supplies",
+    "rarity": "Uncommon",
+    "icon": "🕳️",
+    "desc": "Choose an opponent; they lose 1 wall."
+  },
+  {
+    "id": "reserve",
+    "name": "Reserve Supply",
+    "rarity": "Uncommon",
+    "icon": "🎒",
+    "desc": "Instantly gain 2 walls and keep your turn."
+  },
+  {
+    "id": "cross_jump",
+    "name": "Cross Jump",
+    "rarity": "Rare",
+    "icon": "🧿",
+    "desc": "Blink exactly 2 tiles in a straight line, over walls if needed."
+  },
+  {
+    "id": "demolition",
+    "name": "Demolition",
+    "rarity": "Rare",
+    "icon": "🔨",
+    "desc": "Remove any wall on the board."
+  },
+  {
+    "id": "free_long",
+    "name": "Free Long Wall",
+    "rarity": "Rare",
+    "icon": "🏗️",
+    "desc": "Place a 3-tile wall for free."
+  },
+  {
+    "id": "double_build",
+    "name": "Double Build",
+    "rarity": "Rare",
+    "icon": "🔧",
+    "desc": "Build a normal wall, then receive one extra action."
+  },
+  {
+    "id": "long_vault",
+    "name": "Long Vault",
+    "rarity": "Rare",
+    "icon": "🚀",
+    "desc": "Move up to 2 tiles, crossing walls on the way."
+  },
+  {
+    "id": "robber",
+    "name": "Supply Heist",
+    "rarity": "Rare",
+    "icon": "🦝",
+    "desc": "Take up to 2 walls from a chosen opponent."
+  },
+  {
+    "id": "extra_action",
+    "name": "Second Wind",
+    "rarity": "Rare",
+    "icon": "⚡",
+    "desc": "Move normally, then take one extra action."
+  },
+  {
+    "id": "great_wall",
+    "name": "Great Wall",
+    "rarity": "Epic",
+    "icon": "🏰",
+    "desc": "Place a 4-tile wall for one wall unit."
+  },
+  {
+    "id": "phantom",
+    "name": "Phantom Step",
+    "rarity": "Epic",
+    "icon": "👻",
+    "desc": "Blink exactly 3 tiles in a straight line, ignoring intervening walls."
+  },
+  {
+    "id": "wall_storm",
+    "name": "Wall Storm",
+    "rarity": "Epic",
+    "icon": "🌪️",
+    "desc": "Place a 3-tile wall, then take one extra action."
+  },
+  {
+    "id": "super_cache",
+    "name": "Super Cache",
+    "rarity": "Epic",
+    "icon": "💰",
+    "desc": "Instantly gain 5 walls. Does not use your turn."
+  },
+  {
+    "id": "wrecking_ball",
+    "name": "Wrecking Ball",
+    "rarity": "Legendary",
+    "icon": "💥",
+    "desc": "Destroy a selected wall plus any wall touching it."
+  },
+  {
+    "id": "portal",
+    "name": "Portal",
+    "rarity": "Legendary",
+    "icon": "🌀",
+    "desc": "Teleport to any free square within 3 steps (Manhattan distance)."
+  },
+  {
+    "id": "fortress",
+    "name": "Fortress",
+    "rarity": "Legendary",
+    "icon": "👑",
+    "desc": "Place a 4-tile wall for free and receive an extra action."
+  },
+  {
+    "id": "master_builder",
+    "name": "Master Builder",
+    "rarity": "Legendary",
+    "icon": "🛠️",
+    "desc": "Instantly gain 7 walls, without ending your turn."
+  }
+]

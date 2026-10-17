@@ -1,0 +1,143 @@
+[
+  {
+    "id": "vanguard",
+    "name": "Vanguard",
+    "icon": "⚡",
+    "title": "THE SPEEDSTER",
+    "color": "#57e7c2",
+    "tag": "MOBILITY",
+    "starter": "trail_runner",
+    "desc": "Run circles around your rivals. Your stride grows stronger as the match goes on.",
+    "skill": "Overdrive",
+    "skillDesc": "Dash up to 3 / 4 / 4 open tiles in a straight line.",
+    "kind": "move",
+    "effect": "stride",
+    "power": [
+      3,
+      4,
+      4
+    ],
+    "cooldown": [
+      3,
+      3,
+      2
+    ]
+  },
+  {
+    "id": "architect",
+    "name": "Architect",
+    "icon": "◈",
+    "title": "THE MASTER BUILDER",
+    "color": "#ffbd68",
+    "tag": "CONTROL",
+    "starter": "brick_apprentice",
+    "desc": "Build more for less and bend the board to your plan.",
+    "skill": "Blueprint",
+    "skillDesc": "Place a free 3 / 3 / 4-tile barricade.",
+    "kind": "wall",
+    "power": [
+      3,
+      3,
+      4
+    ],
+    "cooldown": [
+      4,
+      3,
+      3
+    ]
+  },
+  {
+    "id": "wraith",
+    "name": "Wraith",
+    "icon": "☾",
+    "title": "THE GHOST",
+    "color": "#ba8aff",
+    "tag": "ESCAPE",
+    "starter": "corner_cutter",
+    "desc": "Glide around corners and slip straight through obstacles.",
+    "skill": "Phase Shift",
+    "skillDesc": "Blink exactly 2 / 3 / 3 tiles through barriers.",
+    "kind": "move",
+    "effect": "blink",
+    "power": [
+      2,
+      3,
+      3
+    ],
+    "cooldown": [
+      3,
+      3,
+      2
+    ]
+  },
+  {
+    "id": "saboteur",
+    "name": "Saboteur",
+    "icon": "✹",
+    "title": "THE DISRUPTOR",
+    "color": "#ff758f",
+    "tag": "DISRUPTION",
+    "starter": "expert_recycler",
+    "desc": "Take down rival walls and rewrite the best route.",
+    "skill": "Shatter",
+    "skillDesc": "Destroy a barricade. Recharges faster as you master the class.",
+    "kind": "remove",
+    "power": [
+      1,
+      1,
+      1
+    ],
+    "cooldown": [
+      4,
+      3,
+      2
+    ]
+  },
+  {
+    "id": "oracle",
+    "name": "Oracle",
+    "icon": "✧",
+    "title": "THE SPACEBENDER",
+    "color": "#63c9ff",
+    "tag": "TELEPORT",
+    "starter": "expedition_pack",
+    "desc": "Sense the path ahead and hop between distant tiles.",
+    "skill": "Warp Gate",
+    "skillDesc": "Teleport within 2 / 3 / 3 tiles, ignoring barriers.",
+    "kind": "move",
+    "effect": "portal",
+    "power": [
+      2,
+      3,
+      3
+    ],
+    "cooldown": [
+      4,
+      3,
+      3
+    ]
+  },
+  {
+    "id": "sentinel",
+    "name": "Sentinel",
+    "icon": "⬡",
+    "title": "THE FORTRESS",
+    "color": "#a8f38a",
+    "tag": "DEFENCE",
+    "starter": "steady_income",
+    "desc": "Outlast every rival with reliable reinforcement supplies.",
+    "skill": "Resupply",
+    "skillDesc": "Gain 3 / 4 / 5 walls without ending your turn.",
+    "kind": "instant",
+    "power": [
+      3,
+      4,
+      5
+    ],
+    "cooldown": [
+      4,
+      4,
+      3
+    ]
+  }
+]

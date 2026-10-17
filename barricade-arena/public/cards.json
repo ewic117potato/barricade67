@@ -4,195 +4,841 @@
     "name": "Spare Planks",
     "rarity": "Common",
     "icon": "🪵",
-    "desc": "Instantly gain 1 wall. Does not use your turn."
+    "desc": "One use · gain 2 walls without ending your turn.",
+    "kind": "instant",
+    "effect": "walls",
+    "power": 2
   },
   {
-    "id": "builder_kit",
-    "name": "Builder Kit",
+    "id": "little_boost",
+    "name": "Quick Boost",
+    "rarity": "Common",
+    "icon": "👟",
+    "desc": "One use · move 2 clear spaces in a straight line.",
+    "kind": "move",
+    "effect": "stride",
+    "max": 2
+  },
+  {
+    "id": "supply_pouch",
+    "name": "Supply Pouch",
+    "rarity": "Common",
+    "icon": "🎒",
+    "desc": "Permanent · gain 2 walls on unlock and 1 per level every 4 turns.",
+    "kind": "passive",
+    "effect": "gainWalls",
+    "power": 2
+  },
+  {
+    "id": "brick_apprentice",
+    "name": "Brick Apprentice",
+    "rarity": "Common",
+    "icon": "🧱",
+    "desc": "Permanent · gain 1 wall on unlock and 1 per level every 4 turns.",
+    "kind": "passive",
+    "effect": "gainWalls",
+    "power": 1
+  },
+  {
+    "id": "steady_income",
+    "name": "Steady Income",
+    "rarity": "Common",
+    "icon": "📦",
+    "desc": "Permanent · gain 1 wall at the start of every 3rd personal turn. Each upgrade improves the rate.",
+    "kind": "passive",
+    "effect": "income",
+    "every": 3,
+    "power": 1
+  },
+  {
+    "id": "trail_runner",
+    "name": "Trail Runner",
+    "rarity": "Common",
+    "icon": "🏃",
+    "desc": "Permanent · move up to 2 clear tiles in a straight line on your turn.",
+    "kind": "passive",
+    "effect": "stride",
+    "power": 2
+  },
+  {
+    "id": "corner_cutter",
+    "name": "Corner Cutter",
+    "rarity": "Common",
+    "icon": "↗️",
+    "desc": "Permanent · move diagonally through an open corner.",
+    "kind": "passive",
+    "effect": "diagonal"
+  },
+  {
+    "id": "scavenger",
+    "name": "Scavenger",
+    "rarity": "Common",
+    "icon": "♻️",
+    "desc": "Permanent · every 3rd barricade you build refunds 1 wall.",
+    "kind": "passive",
+    "effect": "refund",
+    "every": 3
+  },
+  {
+    "id": "expedition_pack",
+    "name": "Expedition Pack",
     "rarity": "Common",
     "icon": "🧰",
-    "desc": "Instantly gain 2 walls. Does not use your turn."
+    "desc": "Permanent · gain 3 walls each time the arena expands.",
+    "kind": "passive",
+    "effect": "expansion",
+    "power": 3
   },
   {
     "id": "thin_barrier",
     "name": "Thin Barrier",
     "rarity": "Common",
     "icon": "📏",
-    "desc": "Place a short wall, 1 tile long."
+    "desc": "One use · place a short 1-tile barricade for free.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 1,
+    "cost": 0
   },
   {
-    "id": "free_brick",
-    "name": "Free Brick",
-    "rarity": "Common",
-    "icon": "🧱",
-    "desc": "Place a normal wall without spending a wall."
-  },
-  {
-    "id": "quick_stride",
-    "name": "Quick Stride",
-    "rarity": "Common",
-    "icon": "👟",
-    "desc": "Move up to 2 squares in a straight, unblocked line."
-  },
-  {
-    "id": "side_step",
-    "name": "Side Step",
-    "rarity": "Common",
-    "icon": "↗️",
-    "desc": "Move diagonally one tile via an open corner."
-  },
-  {
-    "id": "emergency_stash",
-    "name": "Emergency Stash",
+    "id": "builder_kit",
+    "name": "Builder Kit",
     "rarity": "Uncommon",
-    "icon": "📦",
-    "desc": "Instantly gain 3 walls. Does not use your turn."
+    "icon": "🧰",
+    "desc": "One use · gain 4 walls instantly.",
+    "kind": "instant",
+    "effect": "walls",
+    "power": 4
   },
   {
     "id": "long_barricade",
     "name": "Long Barricade",
     "rarity": "Uncommon",
     "icon": "📐",
-    "desc": "Place a wall 3 tiles long, costs 1 wall."
+    "desc": "One use · build a 3-tile barricade.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 3
   },
   {
-    "id": "wall_hopper",
-    "name": "Wall Hopper",
+    "id": "wall_stretcher",
+    "name": "Wall Stretcher",
+    "rarity": "Uncommon",
+    "icon": "🏗️",
+    "desc": "Permanent · normal barricades span 3 tiles (4 at level 2).",
+    "kind": "passive",
+    "effect": "longwall",
+    "power": 3
+  },
+  {
+    "id": "wind_runner",
+    "name": "Wind Runner",
+    "rarity": "Uncommon",
+    "icon": "💨",
+    "desc": "Permanent · move up to 3 clear tiles straight ahead.",
+    "kind": "passive",
+    "effect": "stride",
+    "power": 3
+  },
+  {
+    "id": "vault_training",
+    "name": "Vault Training",
     "rarity": "Uncommon",
     "icon": "🦘",
-    "desc": "Step across an adjacent wall; destination must remain escapable."
+    "desc": "Permanent · vault a wall up to 1 tile every 3 personal turns.",
+    "kind": "passive",
+    "effect": "vault",
+    "power": 1,
+    "every": 3
+  },
+  {
+    "id": "expert_recycler",
+    "name": "Expert Recycler",
+    "rarity": "Uncommon",
+    "icon": "🔄",
+    "desc": "Permanent · refund 1 wall every 2 barricades built.",
+    "kind": "passive",
+    "effect": "refund",
+    "every": 2
+  },
+  {
+    "id": "extra_rations",
+    "name": "Extra Rations",
+    "rarity": "Uncommon",
+    "icon": "🥫",
+    "desc": "Permanent · gain 2 walls every 3 personal turns.",
+    "kind": "passive",
+    "effect": "income",
+    "every": 3,
+    "power": 2
+  },
+  {
+    "id": "frontier_cache",
+    "name": "Frontier Cache",
+    "rarity": "Uncommon",
+    "icon": "🌍",
+    "desc": "Permanent · gain 5 walls whenever the map expands.",
+    "kind": "passive",
+    "effect": "expansion",
+    "power": 5
   },
   {
     "id": "sprint",
     "name": "Sprint",
     "rarity": "Uncommon",
-    "icon": "💨",
-    "desc": "Travel up to 3 clear squares in a straight line."
-  },
-  {
-    "id": "reclaim",
-    "name": "Reclaim",
-    "rarity": "Uncommon",
-    "icon": "♻️",
-    "desc": "Remove one of your walls and regain 2 wall units."
-  },
-  {
-    "id": "drain",
-    "name": "Drain Supplies",
-    "rarity": "Uncommon",
-    "icon": "🕳️",
-    "desc": "Choose an opponent; they lose 1 wall."
-  },
-  {
-    "id": "reserve",
-    "name": "Reserve Supply",
-    "rarity": "Uncommon",
-    "icon": "🎒",
-    "desc": "Instantly gain 2 walls and keep your turn."
-  },
-  {
-    "id": "cross_jump",
-    "name": "Cross Jump",
-    "rarity": "Rare",
-    "icon": "🧿",
-    "desc": "Blink exactly 2 tiles in a straight line, over walls if needed."
+    "icon": "⚡",
+    "desc": "One use · move 3 clear tiles in a straight line.",
+    "kind": "move",
+    "effect": "stride",
+    "max": 3
   },
   {
     "id": "demolition",
     "name": "Demolition",
     "rarity": "Rare",
     "icon": "🔨",
-    "desc": "Remove any wall on the board."
+    "desc": "One use · destroy any barricade.",
+    "kind": "remove",
+    "effect": "demolition"
   },
   {
-    "id": "free_long",
-    "name": "Free Long Wall",
+    "id": "blink_scroll",
+    "name": "Blink Scroll",
     "rarity": "Rare",
-    "icon": "🏗️",
-    "desc": "Place a 3-tile wall for free."
+    "icon": "✨",
+    "desc": "One use · blink exactly 2 tiles straight across obstacles.",
+    "kind": "move",
+    "effect": "blink",
+    "max": 2
   },
   {
-    "id": "double_build",
-    "name": "Double Build",
+    "id": "grand_architect",
+    "name": "Grand Architect",
+    "rarity": "Rare",
+    "icon": "📐",
+    "desc": "Permanent · normal walls stretch 4 tiles.",
+    "kind": "passive",
+    "effect": "longwall",
+    "power": 4
+  },
+  {
+    "id": "wall_jumper",
+    "name": "Wall Jumper",
+    "rarity": "Rare",
+    "icon": "🪂",
+    "desc": "Permanent · vault up to 2 tiles across walls every 3 turns.",
+    "kind": "passive",
+    "effect": "vault",
+    "power": 2,
+    "every": 3
+  },
+  {
+    "id": "blink_boots",
+    "name": "Blink Boots",
+    "rarity": "Rare",
+    "icon": "🌀",
+    "desc": "Permanent · blink exactly 2 tiles straight every 4 turns.",
+    "kind": "passive",
+    "effect": "blink",
+    "power": 2,
+    "every": 4
+  },
+  {
+    "id": "supply_line",
+    "name": "Supply Line",
+    "rarity": "Rare",
+    "icon": "🏭",
+    "desc": "Permanent · gain 1 wall at the start of every turn.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 1,
+    "every": 1
+  },
+  {
+    "id": "efficient_builder",
+    "name": "Efficient Builder",
     "rarity": "Rare",
     "icon": "🔧",
-    "desc": "Build a normal wall, then receive one extra action."
-  },
-  {
-    "id": "long_vault",
-    "name": "Long Vault",
-    "rarity": "Rare",
-    "icon": "🚀",
-    "desc": "Move up to 2 tiles, crossing walls on the way."
+    "desc": "Permanent · every 3rd barricade is free.",
+    "kind": "passive",
+    "effect": "discount",
+    "every": 3
   },
   {
     "id": "robber",
     "name": "Supply Heist",
     "rarity": "Rare",
     "icon": "🦝",
-    "desc": "Take up to 2 walls from a chosen opponent."
+    "desc": "One use · steal up to 2 walls from another player.",
+    "kind": "target",
+    "effect": "steal",
+    "power": 2
   },
   {
-    "id": "extra_action",
-    "name": "Second Wind",
+    "id": "free_long",
+    "name": "Free Long Wall",
     "rarity": "Rare",
-    "icon": "⚡",
-    "desc": "Move normally, then take one extra action."
-  },
-  {
-    "id": "great_wall",
-    "name": "Great Wall",
-    "rarity": "Epic",
     "icon": "🏰",
-    "desc": "Place a 4-tile wall for one wall unit."
+    "desc": "One use · place a 3-tile barricade for free.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 3,
+    "cost": 0
   },
   {
-    "id": "phantom",
-    "name": "Phantom Step",
+    "id": "phase_core",
+    "name": "Phase Core",
     "rarity": "Epic",
     "icon": "👻",
-    "desc": "Blink exactly 3 tiles in a straight line, ignoring intervening walls."
+    "desc": "Permanent · blink exactly 3 tiles straight every 4 turns.",
+    "kind": "passive",
+    "effect": "blink",
+    "power": 3,
+    "every": 4
+  },
+  {
+    "id": "tempo_master",
+    "name": "Tempo Master",
+    "rarity": "Epic",
+    "icon": "⏳",
+    "desc": "Permanent · gain an extra action after moving once every 4 turns.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 4
+  },
+  {
+    "id": "master_mason",
+    "name": "Master Mason",
+    "rarity": "Epic",
+    "icon": "🛠️",
+    "desc": "Permanent · every 2nd wall you place is free.",
+    "kind": "passive",
+    "effect": "discount",
+    "every": 2
+  },
+  {
+    "id": "portal_core",
+    "name": "Portal Core",
+    "rarity": "Epic",
+    "icon": "🔮",
+    "desc": "Permanent · teleport within 2 spaces every 4 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 2,
+    "every": 4
+  },
+  {
+    "id": "fortress_supply",
+    "name": "Fortress Supply",
+    "rarity": "Epic",
+    "icon": "🏯",
+    "desc": "Permanent · gain 2 walls every turn.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 2,
+    "every": 1
   },
   {
     "id": "wall_storm",
     "name": "Wall Storm",
     "rarity": "Epic",
     "icon": "🌪️",
-    "desc": "Place a 3-tile wall, then take one extra action."
+    "desc": "One use · place a 3-tile wall and take another action.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 3,
+    "bonus": 1
   },
   {
-    "id": "super_cache",
-    "name": "Super Cache",
-    "rarity": "Epic",
-    "icon": "💰",
-    "desc": "Instantly gain 5 walls. Does not use your turn."
-  },
-  {
-    "id": "wrecking_ball",
-    "name": "Wrecking Ball",
+    "id": "reality_walker",
+    "name": "Reality Walker",
     "rarity": "Legendary",
-    "icon": "💥",
-    "desc": "Destroy a selected wall plus any wall touching it."
+    "icon": "🌌",
+    "desc": "Permanent · teleport within 3 spaces every 3 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 3,
+    "every": 3
   },
   {
-    "id": "portal",
-    "name": "Portal",
-    "rarity": "Legendary",
-    "icon": "🌀",
-    "desc": "Teleport to any free square within 3 steps (Manhattan distance)."
-  },
-  {
-    "id": "fortress",
-    "name": "Fortress",
+    "id": "world_builder",
+    "name": "World Builder",
     "rarity": "Legendary",
     "icon": "👑",
-    "desc": "Place a 4-tile wall for free and receive an extra action."
+    "desc": "Permanent · place 4-tile walls; every 2nd build is free.",
+    "kind": "passive",
+    "effect": "longwall",
+    "power": 4,
+    "also": "discount"
+  },
+  {
+    "id": "time_bender",
+    "name": "Time Bender",
+    "rarity": "Legendary",
+    "icon": "⌛",
+    "desc": "Permanent · extra move action every 3 turns.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 3
   },
   {
     "id": "master_builder",
     "name": "Master Builder",
     "rarity": "Legendary",
-    "icon": "🛠️",
-    "desc": "Instantly gain 7 walls, without ending your turn."
+    "icon": "💰",
+    "desc": "One use · instantly gain 7 walls without spending your turn.",
+    "kind": "instant",
+    "effect": "walls",
+    "power": 7
+  },
+  {
+    "id": "fortress",
+    "name": "Fortress",
+    "rarity": "Legendary",
+    "icon": "⚔️",
+    "desc": "One use · build a 4-tile wall for free, then act again.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 4,
+    "cost": 0,
+    "bonus": 1
+  },
+  {
+    "id": "cosmic_architect",
+    "name": "Cosmic Architect",
+    "rarity": "Mythic",
+    "icon": "🌠",
+    "desc": "Permanent · build 4-tile walls for free every 2nd placement and gain 2 walls each expansion.",
+    "kind": "passive",
+    "effect": "longwall",
+    "power": 4,
+    "also": "discount",
+    "extraExpansion": 2
+  },
+  {
+    "id": "singularity_stride",
+    "name": "Singularity Stride",
+    "rarity": "Mythic",
+    "icon": "💫",
+    "desc": "Permanent · teleport within 4 spaces every 3 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 4,
+    "every": 3
+  },
+  {
+    "id": "neon_kicks",
+    "name": "Neon Kicks",
+    "rarity": "Common",
+    "icon": "🛼",
+    "desc": "Permanent · move 2 straight tiles. Repeats upgrade your speed.",
+    "kind": "passive",
+    "effect": "stride",
+    "power": 2
+  },
+  {
+    "id": "map_scout",
+    "name": "Map Scout",
+    "rarity": "Common",
+    "icon": "🧭",
+    "desc": "Permanent · gain 2 extra walls every map expansion.",
+    "kind": "passive",
+    "effect": "expansion",
+    "power": 2
+  },
+  {
+    "id": "extra_mortar",
+    "name": "Extra Mortar",
+    "rarity": "Common",
+    "icon": "🪣",
+    "desc": "Permanent · gain 2 walls now, plus recurring walls every four turns.",
+    "kind": "passive",
+    "effect": "gainWalls",
+    "power": 2
+  },
+  {
+    "id": "route_memory",
+    "name": "Route Memory",
+    "rarity": "Common",
+    "icon": "🗺️",
+    "desc": "Permanent · use open diagonal corners to outmaneuver rivals.",
+    "kind": "passive",
+    "effect": "diagonal"
+  },
+  {
+    "id": "bounce_kit",
+    "name": "Bounce Kit",
+    "rarity": "Uncommon",
+    "icon": "🪁",
+    "desc": "Permanent · vault 1 tile over walls every 4 turns.",
+    "kind": "passive",
+    "effect": "vault",
+    "power": 1,
+    "every": 4
+  },
+  {
+    "id": "wall_accountant",
+    "name": "Wall Accountant",
+    "rarity": "Uncommon",
+    "icon": "🪙",
+    "desc": "Permanent · every fourth wall is free.",
+    "kind": "passive",
+    "effect": "discount",
+    "every": 4
+  },
+  {
+    "id": "crystal_income",
+    "name": "Crystal Income",
+    "rarity": "Uncommon",
+    "icon": "🔷",
+    "desc": "Permanent · gain 2 walls every 4 turns.",
+    "kind": "passive",
+    "effect": "income",
+    "every": 4,
+    "power": 2
+  },
+  {
+    "id": "skybridge_runner",
+    "name": "Skybridge Runner",
+    "rarity": "Rare",
+    "icon": "🌉",
+    "desc": "Permanent · move up to 3 straight open tiles.",
+    "kind": "passive",
+    "effect": "stride",
+    "power": 3
+  },
+  {
+    "id": "loop_portal",
+    "name": "Loop Portal",
+    "rarity": "Rare",
+    "icon": "🪬",
+    "desc": "Permanent · teleport within 1 tile every 3 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 1,
+    "every": 3
+  },
+  {
+    "id": "secret_tunnel",
+    "name": "Secret Tunnel",
+    "rarity": "Rare",
+    "icon": "🕳️",
+    "desc": "Permanent · blink 2 tiles through walls every 5 turns.",
+    "kind": "passive",
+    "effect": "blink",
+    "power": 2,
+    "every": 5
+  },
+  {
+    "id": "spectral_wings",
+    "name": "Spectral Wings",
+    "rarity": "Epic",
+    "icon": "🪽",
+    "desc": "Permanent · vault up to 3 tiles every 4 turns.",
+    "kind": "passive",
+    "effect": "vault",
+    "power": 3,
+    "every": 4
+  },
+  {
+    "id": "overclock",
+    "name": "Overclock",
+    "rarity": "Epic",
+    "icon": "🔋",
+    "desc": "Permanent · periodically get a free extra action after moving.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 5
+  },
+  {
+    "id": "infinite_cache",
+    "name": "Infinite Cache",
+    "rarity": "Legendary",
+    "icon": "🏦",
+    "desc": "Permanent · gain 3 walls every personal turn.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 3,
+    "every": 1
+  },
+  {
+    "id": "chronos_eye",
+    "name": "Chronos Eye",
+    "rarity": "Mythic",
+    "icon": "👁️",
+    "desc": "Permanent · gain an extra action after moving every 2 turns.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 2
+  },
+  {
+    "id": "third_wind",
+    "name": "Third Wind",
+    "rarity": "Uncommon",
+    "icon": "🟩",
+    "desc": "One use · sprint up to 4 tiles without crossing walls.",
+    "kind": "move",
+    "effect": "stride",
+    "max": 4
+  },
+  {
+    "id": "rift_blink",
+    "name": "Rift Blink",
+    "rarity": "Rare",
+    "icon": "🟣",
+    "desc": "One use · blink exactly 3 tiles through obstacles.",
+    "kind": "move",
+    "effect": "blink",
+    "max": 3
+  },
+  {
+    "id": "instant_foundation",
+    "name": "Instant Foundation",
+    "rarity": "Epic",
+    "icon": "💠",
+    "desc": "One use · place a free 4-tile wall.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 4,
+    "cost": 0
+  },
+  {
+    "id": "double_scavenge",
+    "name": "Lucky Pouch",
+    "rarity": "Common",
+    "icon": "🍀",
+    "desc": "Permanent · get 1 wall every 3 turns.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 1,
+    "every": 3
+  },
+  {
+    "id": "baby_teleport",
+    "name": "Blink Charm",
+    "rarity": "Uncommon",
+    "icon": "🔹",
+    "desc": "Permanent · teleport within 1 square every 2 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 1,
+    "every": 2
+  },
+  {
+    "id": "freebuild",
+    "name": "Master Contractor",
+    "rarity": "Rare",
+    "icon": "🔩",
+    "desc": "Permanent · every 2nd placed wall costs nothing.",
+    "kind": "passive",
+    "effect": "discount",
+    "every": 2
+  },
+  {
+    "id": "stormrunner",
+    "name": "Stormrunner",
+    "rarity": "Rare",
+    "icon": "🌩️",
+    "desc": "Permanent · run up to 4 clear spaces in a straight line.",
+    "kind": "passive",
+    "effect": "stride",
+    "power": 4
+  },
+  {
+    "id": "echo_steps",
+    "name": "Echo Steps",
+    "rarity": "Epic",
+    "icon": "🪞",
+    "desc": "Permanent · earn a bonus action after moving every 3 turns.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 3
+  },
+  {
+    "id": "wall_factory",
+    "name": "Wall Factory",
+    "rarity": "Epic",
+    "icon": "🏭",
+    "desc": "Permanent · earn 3 walls every second turn.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 3,
+    "every": 2
+  },
+  {
+    "id": "superposition",
+    "name": "Superposition",
+    "rarity": "Epic",
+    "icon": "💎",
+    "desc": "Permanent · teleport within 3 tiles every 2 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 3,
+    "every": 2
+  },
+  {
+    "id": "royal_vault",
+    "name": "Royal Vault",
+    "rarity": "Legendary",
+    "icon": "🪽",
+    "desc": "Permanent · vault up to 4 spaces every 2 turns.",
+    "kind": "passive",
+    "effect": "vault",
+    "power": 4,
+    "every": 2
+  },
+  {
+    "id": "demolition_genius",
+    "name": "Demolition Genius",
+    "rarity": "Legendary",
+    "icon": "🔥",
+    "desc": "Permanent · refund 1 wall every time you build.",
+    "kind": "passive",
+    "effect": "refund",
+    "every": 1
+  },
+  {
+    "id": "hyperdrive",
+    "name": "Hyperdrive",
+    "rarity": "Legendary",
+    "icon": "🚀",
+    "desc": "Permanent · earn a bonus action after moving every 2 turns.",
+    "kind": "passive",
+    "effect": "bonusmove",
+    "every": 2
+  },
+  {
+    "id": "void_emperor",
+    "name": "Void Emperor",
+    "rarity": "Mythic",
+    "icon": "🌑",
+    "desc": "Permanent · blink exactly 4 spaces through obstacles every 2 turns.",
+    "kind": "passive",
+    "effect": "blink",
+    "power": 4,
+    "every": 2
+  },
+  {
+    "id": "godspeed",
+    "name": "Godspeed",
+    "rarity": "Mythic",
+    "icon": "🌟",
+    "desc": "Permanent · teleport within 4 tiles every 2 turns.",
+    "kind": "passive",
+    "effect": "portal",
+    "power": 4,
+    "every": 2
+  },
+  {
+    "id": "the_mint",
+    "name": "Infinite Mint",
+    "rarity": "Mythic",
+    "icon": "💰",
+    "desc": "Permanent · earn 5 walls at the start of every personal turn.",
+    "kind": "passive",
+    "effect": "income",
+    "power": 5,
+    "every": 1
+  },
+  {
+    "id": "rocket_jump",
+    "name": "Rocket Jump",
+    "rarity": "Uncommon",
+    "icon": "🧨",
+    "desc": "One use · leap 3 spaces over barricades in a straight line.",
+    "kind": "move",
+    "effect": "phase",
+    "max": 3
+  },
+  {
+    "id": "prism_gate",
+    "name": "Prism Gate",
+    "rarity": "Rare",
+    "icon": "🌀",
+    "desc": "One use · teleport within 3 spaces, ignoring walls.",
+    "kind": "move",
+    "effect": "portal",
+    "max": 3
+  },
+  {
+    "id": "earthshaker",
+    "name": "Earthshaker",
+    "rarity": "Epic",
+    "icon": "🌋",
+    "desc": "One use · destroy a wall and every wall that touches it.",
+    "kind": "remove",
+    "effect": "blast"
+  },
+  {
+    "id": "kingmaker",
+    "name": "Kingmaker",
+    "rarity": "Legendary",
+    "icon": "♛",
+    "desc": "One use · steal up to 6 walls from a rival.",
+    "kind": "target",
+    "effect": "steal",
+    "power": 6
+  },
+  {
+    "id": "rewind_rival",
+    "name": "Rewind Rival",
+    "rarity": "Legendary",
+    "icon": "⏪",
+    "desc": "One use · send an opponent back to their starting tile if empty.",
+    "kind": "target",
+    "effect": "reset",
+    "power": 1
+  },
+  {
+    "id": "dimension_flip",
+    "name": "Dimension Flip",
+    "rarity": "Mythic",
+    "icon": "🔁",
+    "desc": "One use · swap positions with a rival. Can win if your new position is a goal.",
+    "kind": "target",
+    "effect": "swap",
+    "power": 1
+  },
+  {
+    "id": "timefracture",
+    "name": "Time Fracture",
+    "rarity": "Mythic",
+    "icon": "⏱️",
+    "desc": "One use · bank one extra action after your next move or wall.",
+    "kind": "instant",
+    "effect": "timeburst",
+    "power": 1
+  },
+  {
+    "id": "massive_planks",
+    "name": "Massive Planks",
+    "rarity": "Uncommon",
+    "icon": "🪓",
+    "desc": "One use · gain 5 walls without ending your turn.",
+    "kind": "instant",
+    "effect": "walls",
+    "power": 5
+  },
+  {
+    "id": "void_wall",
+    "name": "Void Wall",
+    "rarity": "Legendary",
+    "icon": "🖤",
+    "desc": "One use · place a free 4-tile barricade and take another action.",
+    "kind": "wall",
+    "effect": "wall",
+    "length": 4,
+    "cost": 0,
+    "bonus": 1
+  },
+  {
+    "id": "cataclysm_dash",
+    "name": "Cataclysm Dash",
+    "rarity": "Mythic",
+    "icon": "☄️",
+    "desc": "One use · teleport to any unoccupied tile within 5 steps.",
+    "kind": "move",
+    "effect": "portal",
+    "max": 5
   }
 ]
